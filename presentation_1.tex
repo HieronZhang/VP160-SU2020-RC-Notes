@@ -1,0 +1,303 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[RC1]{VP160 Recitation Class 1} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{Zhang Haoyang} % Your name
+\institute[UM-SJTU Joint institute] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+    UM-SJTU Joint institute \\ % Your institution for the title page
+\medskip 
+\textit{zhy-sjtu-jc@sjtu.edu.cn} % Your email address
+}
+\date{May 18, 2020} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+    \includegraphics[width=1\linewidth]{U-M_LOGO.png}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}
+\frametitle{Overview} % Table of contents slide, comment this block out to remove it
+\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\section{Before We Start} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+\begin{frame}
+    \frametitle{Before We Start}
+    \begin{block}{My Style}
+    \begin{enumerate}
+        \item Basically hand-written, especially for model's derivation.
+        \item A Brief review.
+        \item More focus on deeper/alternative understanding of formulas, useful and practical models that you may use in assignments and exams.
+        \item Exercise problems. 
+    \end{enumerate}
+    \end{block}
+    
+    \begin{block}{Asking Questions}
+    You are encouraged to ask questions on the chat window of zoom during the RC class or ask directly in OH (just after the RC class). 
+    I will watch the chat window, and answer some good questions. By this way, I can fully use the 90 mins to talk about more things. 
+    \end{block}
+
+    \end{frame}
+ %------------------------------------------------
+
+\begin{frame}
+    \frametitle{Before We Start}
+    \begin{block}{Extended Content}
+    In the future I will also talk about some extended knowledge, which may not be required by VP160 course (Will be definitely less than 5\% proportion), just 
+    try to improve your understanding for Physics and help you better understand vp160 course contents. I will 
+    use purple highlighter pen to mark them.
+    \end{block}
+    
+    
+
+    \end{frame}
+%------------------------------------------------
+
+\section{Preparations for learning Physics}
+\subsection{Scientific Notation}
+\begin{frame}
+\frametitle{Scientific Notation}
+\begin{enumerate}
+    \item ln the form of $a \times 10^{n}(1 \leq|a|<10)$
+    \item Often been used in Physics, especially for some very large number or very small number. e.g. Planetary motion problem or Quantum Physics.
+    \item e.g. gravitation constant $G=6.67384 \times 10^{-11}$
+\end{enumerate}
+
+\end{frame}
+
+%------------------------------------------------
+\subsection{Units and Dimension Analysis}
+\begin{frame}
+    \frametitle{Unit Prefixes and Conversion}
+    Add a prefix to the given unit to measure in a different scale.
+    \[
+    \begin{array}{ccccccc}
+    p & n & \mu & m & c & k & M \\
+    10^{-12} & 10^{-9} & 10^{-6} & 10^{-3} & 10^{-2} & 10^{3} & 10^{6}
+    \end{array}
+    \]
+    The procedure of a unit conversion is as follows:
+    \[
+    1000 \mathrm{m^3} =1000 (\frac{\mathrm{m}}{\mathrm{km}})^3 \cdot \mathrm{km^3}
+    =1 \times 10^3 \cdot 1 \times 10^{-9}\mathrm{km^3}=1 \times 10^{-6}\mathrm{km^3}
+    \]
+    
+    \end{frame}
+%------------------------------------------------
+
+\begin{frame}
+    \frametitle{Dimension Analysis: System of Units}
+    \begin{enumerate}
+        \item We can first select some physical quantities as the "basic quantities" and specify a "basic unit of measurement" for each basic quantity, \textbf{the other physical quantities’ units can be derived from the relation (definition or law) between them and the fundamental quantities.} These physical quantities are called "derived quantities" and their units
+        It's called derived unit.
+        \item A set of units formed in this way, is called a certain \textbf{"system of units"}.\\
+        \item  For example, the \textbf{SI system of units}, which is most commonly used, contains seven basic quantities:$L, m, t, I, T, n, lv$; Seven basic units:$m, kg, s, A, K, mol, cd$. Force ($F$) is an derived quantity, N is the derived unit, and the relationship with the basic unit is $N=kg \cdot m / s^{2}$
+    
+    \end{enumerate}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+    \frametitle{Dimension Analysis: Method of Undetermined Coefficients}
+    \begin{enumerate}
+
+        \item We often use capital letter to represent a "dimensional quantity", and use [x] to represent 
+        the "dimensional quantity" of physical quantity x. \\ 
+        e.g.  The dimensional quantity of mass m is written as: $M=[m]$\\ 
+        \item In this course, we use "Method of Undetermined Coefficients" to do exercises. (Although this method is not rigorous.)
+            \begin{block}{Exercise 1}
+                A simple pendulum consists of a light inextensible string AB with length $l$, with the end A fixed, 
+                and a point mass $m$ attached to B. The pendulum oscillates with a small amplitude, and the period
+                of oscillation is T. It is suggested that T is proportional to the product of powers of $m$, $l$ and $g$,
+                where $g$ is the acceleration due to gravity. Use dimensional analysis to find this relationship.
+            \end{block}
+    \end{enumerate}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+    \frametitle{Dimension Analysis: Method of Undetermined Coefficients}
+    
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+    \frametitle{Dimension Analysis}
+    Actually, There is an entire theory that describes dimension analysis.\\ 
+     "$\Pi$ Theorem"(NOT REQUIRED IN THIS COURSE) is the core essence 
+    of dimension analysis. \\
+    If you are interested, I have posted an extended reading file about "$\Pi$ Theorem" that was written by me in 2019/09 on canvas.\\ 
+    For those students who wants to take UPC in November, personally I think it may be useful for you. 
+    
+\end{frame}
+%------------------------------------------------
+\subsection{Uncertainty and Significant Figures}
+\begin{frame}
+    \frametitle{Uncertainty}
+    \begin{enumerate}
+        \item Because of limitations of measurement devices, imperfect measurement procedures and randomness of environmental conditions, as well as human factors related to the experimenter himself, no measurement can ever be perfect. Its result may therefore only be treated as an estimate of what we call the "exact value" of a physical quantity. The experiment may both overestimate and underestimate the value of the physical quantity, and it is crucial to provide a measure of the error, or better uncertainty, that a result of the experiment carries (cited from "Introduction to Measurement Data Analysis" in $\mathrm{VP}141$ ).
+        \item The detailed calculation will be encountered in VP$ 141 .$ The principles of uncertainty analysis will be explained in $\mathrm{VE} 401$
+    \end{enumerate}
+ 
+\end{frame}
+%------------------------------------------------
+
+\begin{frame}
+    \frametitle{Significant Figures}
+    \begin{enumerate}
+        \item The significant figure required in VP160 is not so strict.
+        \item However, in principle, the significant figure rule for this course is the same as VC210.
+    \end{enumerate}
+    \begin{figure}
+    \includegraphics[width=0.9\linewidth]{sf0}
+    \end{figure}
+    
+
+\end{frame}
+%------------------------------------------------
+
+\begin{frame}
+    \frametitle{Significant Figures}
+    
+    \begin{figure}
+    \includegraphics[width=0.9\linewidth]{sf1}
+    \end{figure}
+    
+
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+    \frametitle{Significant Figures}
+    \begin{enumerate}
+        \item The experiment measurement uncertainty should be rounded down to one significant figure.
+        \item The only exception is when the uncertainty (if written in scientific notation) has a leading digit of 1 and a second digit should be kept.
+        \item The total significant figure of any result in experiment should be determined by the uncertainty of this quantity. You should always calculate the uncertainty first in VP141.
+    \end{enumerate}
+    
+    
+
+\end{frame}
+%------------------------------------------------
+\subsection{Back-of-the-envelope Calculation}
+\begin{frame}
+    \frametitle{Back-of-the-envelope Calculation}
+    \begin{block}{Definition}
+        A quick estimation of some physical quantities.
+    \end{block}
+        
+    \begin{block}{Comments}
+        \begin{enumerate}
+            \item  You should cultivate a common sense about the order of magnitude of quantities in everyday lives.
+            \item  Tips: Try to remember the order of magnitude of some important constant.
+            \item  This type of question will occur in your exams.
+        \end{enumerate}
+       
+        
+    \end{block}
+ 
+\end{frame}
+%------------------------------------------------
+\section{Vectors and Basic Vector Operations}
+\section{3D curvilinear coordinate systems}
+\subsection{cylindrical coordinate systems}
+\subsection{spherical coordinate systems}
+\subsection{polar coordinate systems}
+\section{1D kinematics}
+\begin{frame}
+    
+\end{frame}
+
+
+%------------------------------------------------
+
+
+\end{document} 
